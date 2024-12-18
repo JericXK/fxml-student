@@ -4,28 +4,31 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="438.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Jeric.controller.Maincontroller">
+<AnchorPane prefHeight="438.0" prefWidth="952.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Jeric.controller.Maincontroller">
    <children>
-      <Label layoutX="46.0" layoutY="23.0" prefHeight="64.0" prefWidth="433.0" text="Student Registration">
+      <Label layoutX="262.0" layoutY="14.0" prefHeight="82.0" prefWidth="540.0" text="Student Registration">
          <font>
-            <Font name="System Bold Italic" size="41.0" />
+            <Font name="System Bold Italic" size="55.0" />
          </font>
       </Label>
-      <TextField fx:id="firstname" layoutX="152.0" layoutY="105.0" prefHeight="26.0" prefWidth="271.0" />
-      <TextField fx:id="middlename" layoutX="152.0" layoutY="146.0" prefHeight="26.0" prefWidth="271.0" />
-      <TextField fx:id="lastName" layoutX="152.0" layoutY="186.0" prefHeight="26.0" prefWidth="271.0" />
-      <TextField fx:id="Address" layoutX="152.0" layoutY="226.0" prefHeight="26.0" prefWidth="271.0" />
-      <TextField fx:id="PhoneNumber" layoutX="152.0" layoutY="267.0" prefHeight="26.0" prefWidth="271.0" />
-      <TextField fx:id="Email" layoutX="151.0" layoutY="305.0" prefHeight="26.0" prefWidth="271.0" />
-      <RadioButton fx:id="Male" layoutX="152.0" layoutY="341.0" mnemonicParsing="false" text="Male">
+      <TextField fx:id="firstname" layoutX="139.0" layoutY="104.0" prefHeight="26.0" prefWidth="258.0" />
+      <TextField fx:id="middlename" layoutX="139.0" layoutY="145.0" prefHeight="26.0" prefWidth="258.0" />
+      <TextField fx:id="lastName" layoutX="139.0" layoutY="185.0" prefHeight="26.0" prefWidth="258.0" />
+      <TextField fx:id="Address" layoutX="139.0" layoutY="225.0" prefHeight="26.0" prefWidth="258.0" />
+      <TextField fx:id="PhoneNumber" layoutX="139.0" layoutY="266.0" prefHeight="26.0" prefWidth="258.0" />
+      <TextField fx:id="Email" layoutX="139.0" layoutY="304.0" prefHeight="26.0" prefWidth="258.0" />
+      <RadioButton fx:id="Male" layoutX="139.0" layoutY="343.0" mnemonicParsing="false" text="Male">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="Female" layoutX="326.0" layoutY="343.0" mnemonicParsing="false" text="Female" toggleGroup="$gender">
          <font>
             <Font size="14.0" />
          </font></RadioButton>
-      <RadioButton fx:id="Female" layoutX="351.0" layoutY="341.0" mnemonicParsing="false" text="Female">
-         <font>
-            <Font size="14.0" />
-         </font></RadioButton>
-      <Button fx:id="save" layoutX="152.0" layoutY="377.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="271.0" text="SAVE">
+      <Button layoutX="139.0" layoutY="376.0" mnemonicParsing="false" onAction="#save" prefHeight="46.0" prefWidth="258.0" text="SAVE">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
@@ -65,5 +68,26 @@
             <Font size="15.0" />
          </font>
       </Label>
+      <TableView fx:id="table" layoutX="411.0" layoutY="104.0" prefHeight="267.0" prefWidth="531.0">
+        <columns>
+          <TableColumn fx:id="colfn" prefWidth="75.0" text="First Name" />
+          <TableColumn fx:id="colmn" prefWidth="83.20001220703125" text="Middle Name" />
+            <TableColumn fx:id="collas" prefWidth="67.199951171875" text="Last Name" />
+            <TableColumn fx:id="coladd" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="colpn" prefWidth="93.20001220703125" text="Phone Number" />
+            <TableColumn fx:id="colem" prefWidth="68.5999755859375" text="Email" />
+            <TableColumn fx:id="colgen" prefWidth="64.20001220703125" text="Gender" />
+        </columns>
+      </TableView>
+      <Button layoutX="540.0" layoutY="380.0" mnemonicParsing="false" onAction="#edit" prefHeight="40.0" prefWidth="94.0" text="Edit">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="789.0" layoutY="380.0" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="94.0" text="Delete">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

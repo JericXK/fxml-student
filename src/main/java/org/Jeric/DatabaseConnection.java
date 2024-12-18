@@ -8,7 +8,7 @@ public class DatabaseConnection {
     private String user = "root";
     private String password = "";
 
-    public Connection connection;
+    private Connection connection;
 
     public DatabaseConnection(){
         try{
@@ -17,5 +17,9 @@ public class DatabaseConnection {
         }catch(Exception e){
                 e.printStackTrace();
         }
+    }
+
+    public Connection getConnection(){
+        return connection;
     }
 }

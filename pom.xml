@@ -44,7 +44,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>com.Jeric.Main</mainClass>
+                    <mainClass>org.Jeric.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>

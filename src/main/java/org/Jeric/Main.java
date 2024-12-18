@@ -12,7 +12,8 @@ public class Main extends Application {
     public void start(Stage primarystage) throws IOException{
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/main.fxml")));
         primarystage.setTitle("Registration:");
-        primarystage.setScene(new Scene(root, 450, 450));
+        primarystage.setScene(new Scene(root, 952, 450));
+        primarystage.setMinHeight(500);
         primarystage.show();
     }
     DatabaseConnection db = new DatabaseConnection();
